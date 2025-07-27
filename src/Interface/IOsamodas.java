@@ -13,4 +13,6 @@ public interface IOsamodas {
     void invDragun();
     void sptComunion();
 
+
+
 }
