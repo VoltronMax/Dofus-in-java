@@ -37,4 +37,15 @@ public class Enemy {
                 "\nSalud: " + health +
                 "\nDaño por turno: " + baseDamage;
     }
+
+    public Boolean isDead(){
+        return this.health<=0;
+    }
+
+    public void takeDamage(int cantidad){
+        if (cantidad<=0) return;
+
+        this.health -= cantidad;
+        if (this.health<0) this.health = 0;
+    }
 }
