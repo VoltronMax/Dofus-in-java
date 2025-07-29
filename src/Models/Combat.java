@@ -34,23 +34,49 @@ public class Combat {
 
                 switch (opcion){
                     case 1:
-                        int daño = osa.atqScream();
-                        enemigo.takeDamage(daño);
-                        System.out.println(osa.getName() + "Ha usado Scream. El daño fue de: " + daño + "hp");
+                        int dano = osa.atqScream();
+                        enemigo.takeDamage(dano);
+                        System.out.println(osa.getName() + "Ha usado Scream. El daño fue de: " + dano + "hp");
                         continuar = true;
                         break;
 
                     case 2:
-                        daño = osa.atqSpikes();
-                        enemigo.takeDamage(daño);
-                        System.out.println(osa.getName() + "Ha usado Spikes. El daño fue de: " + daño + "hp");
+                        dano = osa.atqSpikes();
+                        enemigo.takeDamage(dano);
+                        System.out.println(osa.getName() + "Ha usado Spikes. El daño fue de: " + dano + "hp");
                         continuar = true;
                         break;
 
                     case 3:
-                        daño = osa.atqTheeth();
-                        enemigo.takeDamage(daño);
-                        System.out.println(osa.getName() + "Ha usado Spikes. El daño fue de: " + daño + "hp");
+                        dano = osa.atqTheeth();
+                        enemigo.takeDamage(dano);
+                        System.out.println(osa.getName() + "Ha usado Spikes. El daño fue de: " + dano + "hp");
+                        continuar = true;
+                        break;
+
+                    case 4:
+                        dano = osa.atqBear();
+                        enemigo.takeDamage(dano);
+                        System.out.println(osa.getName() + "Ha usado Bear. El daño fue de: " + dano + "hp");
+                        continuar = true;
+                        break;
+
+                    case 5:
+                        dano = osa.atqWhip();
+                        enemigo.takeDamage(dano);
+                        System.out.println(osa.getName() + "Ha usado Whip. El daño fue de: " + dano + "hp");
+                        continuar = true;
+                        break;
+
+                    case 6:
+
+                    case 0:
+                        System.out.println("GOODBYE!");
+                        continuar = false;
+                        break;
+
+                    default:
+                        System.out.println("Opcion incorrecta");
 
                 }
             } while (!continuar);
