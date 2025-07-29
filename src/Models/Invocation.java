@@ -1,12 +1,11 @@
 package Models;
 
 public abstract class Invocation{
-
     private static final int MAX_HEALTH = 100;
-    private String name;
+
+    final private String name;
     private Integer level;
     private Integer health = MAX_HEALTH;
-    private Integer baseDamage;
 
     public Invocation (String name, Integer lvl){
         this.name = name;
@@ -25,6 +24,10 @@ public abstract class Invocation{
         return health;
     }
 
-    
+    public void takeDamage(int cantidad){
+        if (cantidad<=0) return;
 
+        this.health -= cantidad;
+        if (this.health<0) this.health = 0;
+    }
 }

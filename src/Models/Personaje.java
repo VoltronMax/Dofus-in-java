@@ -111,6 +111,10 @@ public abstract class Personaje {
                 "\nNivel: " + getLevel() +
                 "\nExperiencia: " + getXp();
     }
+
+    public boolean isDead(){
+            return health<=0;
+    }
 }
 
 
