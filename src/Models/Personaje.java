@@ -6,7 +6,7 @@ public abstract class Personaje {
     private static final int XP_LEVEL = 100;
 
     //Atributos basicos que heredaran las razas jugables
-    private final String breed;
+    private Razas race;
     private final String gender;
     private final String server;
     private final String name;
@@ -16,8 +16,8 @@ public abstract class Personaje {
 
 
     //Constructor con los atributos no inicializados
-    public Personaje (String breed, String gender, String server, String name){
-        this.breed = breed;
+    public Personaje (Razas race, String gender, String server, String name){
+        this.race = race;
         this.gender = gender;
         this.server = server;
         this.name = name;
@@ -26,8 +26,8 @@ public abstract class Personaje {
     //Getters
 
     //Raza
-    public String getBreed(){
-        return breed;
+    public Razas getRace(){
+        return race;
     }
 
     //Genero
@@ -106,7 +106,7 @@ public abstract class Personaje {
         return ".:Datos del jugador.:" +
                 "Nombre: " + getName() +
                 "\nGenero: " + getGender() +
-                "\nRaza: " + getBreed() +
+                "\nRaza: " + getRace() +
                 "\nSalud: " + getHealth() +
                 "\nNivel: " + getLevel() +
                 "\nExperiencia: " + getXp();

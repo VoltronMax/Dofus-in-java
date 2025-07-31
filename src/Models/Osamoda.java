@@ -3,8 +3,8 @@ import Interface.IOsamodas;
 
 public class Osamoda extends Personaje implements IOsamodas {
 
-    public Osamoda(String breed, String gender, String server, String name) {
-        super(breed, gender, server, name);
+    public Osamoda(Razas race, String gender, String server, String name) {
+        super(race, gender, server, name);
     }
 
     @Override
